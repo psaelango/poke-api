@@ -118,7 +118,7 @@ const Pagination = () => (
   </ul>
 );
 
-const DataCountDisplay = ({dataCount, filteredDataCount}) => (
+const DataCountDisplay = ({ dataCount, filteredDataCount }) => (
   <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
     Showing{" "}
     <span className="font-semibold text-gray-900 dark:text-white">
@@ -131,12 +131,15 @@ const DataCountDisplay = ({dataCount, filteredDataCount}) => (
   </span>
 );
 
-const TableFooter = ({dataCount, filteredDataCount}) => (
+const TableFooter = ({ dataCount, filteredDataCount }) => (
   <nav
     className="flex items-center justify-between pt-4"
     aria-label="Table navigation"
   >
-    <DataCountDisplay dataCount={dataCount} filteredDataCount={filteredDataCount} />
+    <DataCountDisplay
+      dataCount={dataCount}
+      filteredDataCount={filteredDataCount}
+    />
     <Pagination />
   </nav>
 );
@@ -164,6 +167,7 @@ function Home() {
       const { data: pokemonData } = await axios.get(pokemon.url);
 
       formattedData.push({
+        id: pokemonData.id,
         name: pokemonData.name,
         sprite: pokemonData.sprites.front_default,
         moves: pokemonData.moves,
@@ -377,6 +381,7 @@ function Home() {
                       </a>
                     );
                   });
+                console.log("data = ", data);
                 return (
                   <tr
                     key={i}
@@ -386,7 +391,10 @@ function Home() {
                       scope="row"
                       className="px-6 py-4 text-base text-gray-900 whitespace-nowrap dark:text-white"
                     >
-                      <a className="font-medium text-blue-800 dark:text-blue-500 hover:underline px-1">
+                      <a
+                        href={`/pokemon/${data.id}`}
+                        className="font-medium text-blue-800 dark:text-blue-500 hover:underline px-1"
+                      >
                         {data.name}
                       </a>
                     </th>
@@ -414,7 +422,10 @@ function Home() {
           )}
         </tbody>
       </table>
-      <TableFooter dataCount={dataCount} filteredDataCount={filteredDataCount}  />
+      <TableFooter
+        dataCount={dataCount}
+        filteredDataCount={filteredDataCount}
+      />
     </div>
   );
 }
