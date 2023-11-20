@@ -1,8 +1,8 @@
-#  Altrio Frontend Challenge
+#  Frontend Challenge
 
-Thank you for taking the time to do our front-end challenge and for your interest in joining our team!
+Thank you for taking the time to do our front-end challenge!
 
-If you have any questions or concerns, e-mail us. We expect that this assignment will take ~3 hours to complete.
+We expect that this assignment will take ~3 hours to complete.
 
 ##  Instructions
 
@@ -10,7 +10,7 @@ You will be building a React App. We have provided the boilerplate application a
 
 The React App is A Pokédex using data from the [Pokemon API](https://pokeapi.co/), a Pokédex is a Pokémon catalogue/indexer, where you can search and find details about Pokémons.
 
-Please keep this repository private. You should check your solution in here while making commits at logical increments. We’re interested in how your solution developed, not just the end result.
+You should check your solution in here while making commits at logical increments. We’re interested in how your solution developed, not just the end result.
 
 **Please implement the following features**
 
@@ -33,10 +33,6 @@ Please keep this repository private. You should check your solution in here whil
 - you can use libraries, or write your own table from scratch, it's up to you but writing your own table can give you bonus points
 - we want to see your core JS and React skills
 - advanced react concepts can give you extra points 
-
-##  Submission Instructions
-
-Please send us an email when complete so we can review.
   
 ## Setup
 ```
